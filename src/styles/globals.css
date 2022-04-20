@@ -1,0 +1,49 @@
+
+/* styles guide */
+::root {
+    --primary-dark:#002D2F;
+    --primary-main:#00F56E;
+    --primary-light:#c8d8e4;
+    --secondary-dark:#406162;
+    --secondary-main:#539396;
+    --secondary-light:#dadbdb;
+    --alternate-light:#f7faff;
+    --clr-white: #fff;
+    --gray-light:#f2f2f2;
+    --clr-red-dark: hsl(360, 67%, 44%);
+    --clr-red-light: hsl(360, 71%, 66%);
+    --clr-green-dark: hsl(125, 67%, 44%);
+    --clr-green-light: hsl(125, 71%, 66%);
+    --clr-black: #222;
+    --transition: all 0.3s linear;
+    --spacing: 0.1rem;
+    --radius: 0.25rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --max-width: 1170px;
+    --fixed-width: 620px;
+    }
+
+    /* base  styles configuration*/
+    html,
+    body {
+      padding: 0;
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+    }
+    
+    /* --fix pageAnimation overflow effect --- */
+    body {
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
