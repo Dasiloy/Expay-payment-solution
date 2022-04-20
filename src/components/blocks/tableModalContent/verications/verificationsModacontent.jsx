@@ -11,19 +11,22 @@ export default function VerificationModal({
   ...rest
 }) {
   const credentialsList = () => {
-    return activeItemDetails?.credentials?.map((item, i) => ({
-      ...item,
-      Render: ({ children }) => (
-        <MuiBox marginBottom={3}>
-          <Image key={i} imageUrl={item.imageUrl} />
-          <MuiBox marginY={1} />
-          <MuiBox display={'flex'} alignitems={'center'} justifyContent={'space-between'}>
-            <HeadingFive>{`${i + 1}. ${item.title}`}</HeadingFive>
-            {children}
+    return (
+      activeItemDetails &&
+      activeItemDetails.credentials.map((item, i) => ({
+        ...item,
+        Render: ({ children }) => (
+          <MuiBox marginBottom={3}>
+            <Image key={i} imageUrl={item.imageUrl} />
+            <MuiBox marginY={1} />
+            <MuiBox display={'flex'} alignitems={'center'} justifyContent={'space-between'}>
+              <HeadingFive>{`${i + 1}. ${item.title}`}</HeadingFive>
+              {children}
+            </MuiBox>
           </MuiBox>
-        </MuiBox>
-      ),
-    }));
+        ),
+      }))
+    );
   };
 
   return (
